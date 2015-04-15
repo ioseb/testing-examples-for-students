@@ -9,8 +9,7 @@ public class MockitoThrowingDesiredExceptionTest {
 	@Test(expected = RuntimeException.class)
 	public void throwException() {
 
-		Mockito.when(ferrari.needsFuel())
-				.thenThrow(new RuntimeException());
+		Mockito.when(ferrari.needsFuel()).thenThrow(new RuntimeException());
 
 		ferrari.needsFuel();
 	}
